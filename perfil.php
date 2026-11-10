@@ -5,7 +5,7 @@ session_set_cookie_params([
     "path" => "/",
     "secure" => false,
     "httponly" => true,
-    "samesite" => "Strict"
+    "samesite" => "none"
 ]);
 
 session_start();
